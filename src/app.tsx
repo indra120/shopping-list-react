@@ -1,15 +1,14 @@
-import { useState } from "react"
+import shoppingIcon from "@/assets/shopping-icon.svg"
+import "@/app.css"
 
 const App = () => {
-  const [count, setCount] = useState<number>(0)
-  
   return (
-    <div>
-      <h1>{count}</h1>
-
-      <button onClick={() => setCount((prev) => prev + 1)}>Plus</button>
-      <button onClick={() => setCount((prev) => prev - 1)}>Minus</button>
-    </div>
+    <>
+      <nav className="nav">
+        <img src={shoppingIcon} alt="shopping icon" className="nav-icon" />
+        <h1 className="nav-title">Shopping List</h1>
+      </nav>
+    </>
   )
 }
 
