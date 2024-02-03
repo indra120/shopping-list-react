@@ -4,6 +4,7 @@ const App = () => {
   return (
     <>
       <Navbar />
+      <section className="container"></section>
     </>
   )
 }
