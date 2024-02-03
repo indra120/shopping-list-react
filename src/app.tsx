@@ -1,13 +1,9 @@
-import shoppingIcon from "@/assets/shopping-icon.svg"
-import "@/app.css"
+import Navbar from "@/components/navbar"
 
 const App = () => {
   return (
     <>
-      <nav className="nav">
-        <img src={shoppingIcon} alt="shopping icon" className="nav-icon" />
-        <h1 className="nav-title">Shopping List</h1>
-      </nav>
+      <Navbar />
     </>
   )
 }
