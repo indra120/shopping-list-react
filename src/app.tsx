@@ -4,7 +4,11 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className="container"></section>
+      <section className="container">
+        <div className="empty">
+          Kosong nih...
+        </div>
+      </section>
     </>
   )
 }

@@ -46,3 +46,13 @@ code {
   margin: 0 auto;
   background-color: var(--main-container-color);
 }
+
+.empty {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
