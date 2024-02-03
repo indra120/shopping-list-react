@@ -1,4 +1,3 @@
-import type { FC } from "react"
 import styles from "./action-button.module.css"
 
 interface ActionButtonProps {
@@ -7,7 +6,7 @@ interface ActionButtonProps {
   alt: string
 }
 
-const ActionButton: FC<ActionButtonProps> = (props) => (
+const ActionButton: React.FC<ActionButtonProps> = (props) => (
   <button onClick={props.onClick} className={styles.actionButton}>
     <img src={props.icon} alt={props.alt} />
   </button>

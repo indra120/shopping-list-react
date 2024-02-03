@@ -1,4 +1,3 @@
-import { FC } from "react"
 import { ShoppingItem } from "@/app"
 import ActionButton from "@/components/action-button"
 import plusIcon from "@/assets/plus-icon.svg"
@@ -10,7 +9,7 @@ interface ShoppingListsProps {
   setShoppingList: React.Dispatch<React.SetStateAction<ShoppingItem[]>>
 }
 
-const ShoppingLists: FC<ShoppingListsProps> = (props) => {
+const ShoppingLists: React.FC<ShoppingListsProps> = (props) => {
   const increment = (i: number) => () => {
     const newList = [...props.shoppingList]
     newList[i].count++
