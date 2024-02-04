@@ -29,7 +29,7 @@ const App = () => {
     <>
       <Navbar />
 
-      <section className="flex flex-col h-[calc(100vh-55px)] max-w-[480px] p-4 my-0 mx-auto bg-[#f3f4f6]">
+      <section className="flex flex-col h-[540px] max-w-[480px] p-4 my-6 mx-auto bg-[#f3f4f6] rounded-xl shadow-md">
         <AddShoppingItem setShoppingList={setShoppingList} />
 
         <Info
