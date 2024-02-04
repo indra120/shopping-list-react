@@ -29,7 +29,7 @@ const App = () => {
     <>
       <Navbar />
 
-      <section className="container">
+      <section className="flex flex-col h-[calc(100vh-55px)] max-w-[480px] p-4 my-0 mx-auto bg-[#f3f4f6]">
         <AddShoppingItem setShoppingList={setShoppingList} />
 
         <Info
@@ -44,7 +44,9 @@ const App = () => {
             setShoppingList={setShoppingList}
           />
         ) : (
-          <div className="empty">There is nothing in here...</div>
+          <div className="size-full flex justify-center items-center text-base font-semibold">
+            There is nothing in here...
+          </div>
         )}
       </section>
     </>
