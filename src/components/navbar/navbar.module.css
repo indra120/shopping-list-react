@@ -1,4 +1,4 @@
-.nav {
+/* .nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,15 +6,15 @@
   background-color: var(--main-background-color);
   padding: 0 16px;
   height: 55px;
-}
+} */
 
-.nav-icon {
+/* .nav-icon {
   height: 24px;
   width: 24px;
-}
-
+} */
+/* 
 .nav-title {
   color: var(--secondary-font-color);
   font-size: 24px;
   font-weight: bold;
-}
+} */
