@@ -20,10 +20,8 @@ const ShoppingLists: React.FC<ShoppingListsProps> = (props) => {
     const newList = [...props.shoppingList]
 
     if (newList[i].count > 0) {
-      // Selama jumlah count masih di atas 0, bisa lakuin pengurangan
       newList[i].count--
     } else {
-      // Kalo udah 0 dan masih dikurangin juga, hapus array value dengan index yang sesuai
       newList.splice(i, 1)
     }
 
@@ -32,33 +30,23 @@ const ShoppingLists: React.FC<ShoppingListsProps> = (props) => {
 
   return (
     <section className={styles.lists}>
-      {props.shoppingList.map((item, i) => {
-        return (
-          <div
-            className={`${styles.listItem} ${
-              props.shoppingList.length === i + 1 && styles.divider
-            }`}
-            key={i}
-          >
-            {item.title}
+      {props.shoppingList.map((item, i) => (
+        <div
+          className={`${styles.listItem} ${
+            props.shoppingList.length === i + 1 && styles.divider
+          }`}
+          key={i}
+        >
+          {item.title}
 
-            <div className={styles.iconWrapper}>
-              <div className={styles.count}>{item.count}</div>
+          <div className={styles.iconWrapper}>
+            <div className={styles.count}>{item.count}</div>
 
-              <ActionButton
-                onClick={decrement(i)}
-                icon={minusIcon}
-                alt="minus icon"
-              />
-              <ActionButton
-                onClick={increment(i)}
-                icon={plusIcon}
-                alt="plus icon"
-              />
-            </div>
+            <ActionButton onClick={decrement(i)} icon={minusIcon} alt="minus icon" />
+            <ActionButton onClick={increment(i)} icon={plusIcon} alt="plus icon" />
           </div>
-        )
-      })}
+        </div>
+      ))}
     </section>
   )
 }

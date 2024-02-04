@@ -1,4 +1,3 @@
-import { FC } from "react"
 import styles from "./info.module.css"
 
 interface InfoProps {
@@ -7,7 +6,7 @@ interface InfoProps {
   onDelete: () => void
 }
 
-const Info: FC<InfoProps> = (props) => (
+const Info: React.FC<InfoProps> = (props) => (
   <div className={styles.info}>
     <div className={styles.infoTotal}>
       <p>Total List: {props.totalItems}</p>

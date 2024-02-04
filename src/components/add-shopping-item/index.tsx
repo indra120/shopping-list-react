@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useState } from "react"
 import { ShoppingItem } from "@/app"
 import styles from "./add-shopping-item.module.css"
 
@@ -7,25 +7,22 @@ interface AddShoppingItemProps {
 }
 
 const AddShoppingItem: React.FC<AddShoppingItemProps> = (props) => {
-  const titleRef = useRef<HTMLInputElement>(null)
+  const [title, setTitle] = useState<string>("")
 
   const handleSubmit = (e: React.BaseSyntheticEvent) => {
     e.preventDefault()
-    if (!titleRef.current.value) return alert("No blank list!")
+    if (!title) return alert("No title provided!")
 
-    props.setShoppingList((prev) => [
-      ...prev,
-      { title: titleRef.current.value, count: 0 },
-    ])
-    titleRef.current.value = ""
+    props.setShoppingList((prev) => [...prev, { title, count: 0 }])
+    setTitle("")
   }
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <input
         className={styles.input}
-        name="title"
-        ref={titleRef}
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
         type="text"
         placeholder="List"
       />

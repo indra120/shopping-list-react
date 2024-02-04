@@ -28,7 +28,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      
+
       <section className="container">
         <AddShoppingItem setShoppingList={setShoppingList} />
 
