@@ -7,16 +7,19 @@ interface InfoProps {
 }
 
 const Info: React.FC<InfoProps> = (props) => (
-  <div className={styles.info}>
-    <div className={styles.infoTotal}>
-      <p>Total List: {props.totalItems}</p>
+  <div className="flex justify-between items-center w-full py-4 px-0">
+    <div className="flex justify-center items-center text-gray-700 text-xs">
+      <p className="font-bold">Total List: {props.totalItems}</p>
     </div>
 
-    <div className={styles.infoTotal}>
-      <p>Total Counts: {props.totalCounts}</p>
+    <div className="flex justify-center items-center text-gray-700 text-xs">
+      <p className="font-bold">Total Counts: {props.totalCounts}</p>
     </div>
 
-    <button onClick={props.onDelete} className={styles.deleteAllButton}>
+    <button
+      onClick={props.onDelete}
+      className="bg-[none] border-0 p-0 text-red-500 text-xs font-bold"
+    >
       Delete All Items
     </button>
   </div>
