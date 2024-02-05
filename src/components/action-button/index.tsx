@@ -1,5 +1,3 @@
-import styles from "./action-button.module.css"
-
 interface ActionButtonProps {
   onClick: () => void
   icon: string
@@ -7,7 +5,7 @@ interface ActionButtonProps {
 }
 
 const ActionButton: React.FC<ActionButtonProps> = (props) => (
-  <button onClick={props.onClick} className={styles.actionButton}>
+  <button onClick={props.onClick} className="border-0 bg-[unset] p-[unset] size-6 cursor-pointer">
     <img src={props.icon} alt={props.alt} />
   </button>
 )

@@ -1,5 +1,3 @@
-import styles from "./info.module.css"
-
 interface InfoProps {
   totalItems: number
   totalCounts: number
@@ -18,7 +16,7 @@ const Info: React.FC<InfoProps> = (props) => (
 
     <button
       onClick={props.onDelete}
-      className="bg-[none] border-0 p-0 text-red-500 text-xs font-bold"
+      className="bg-[none] border-0 p-0 text-red-500 text-xs font-bold cursor-pointer"
     >
       Delete All Items
     </button>

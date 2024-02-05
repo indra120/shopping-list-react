@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { ShoppingItem } from "@/app"
-// import styles from "./add-shopping-item.module.css"
 
 interface AddShoppingItemProps {
   setShoppingList: React.Dispatch<React.SetStateAction<ShoppingItem[]>>
@@ -27,7 +26,7 @@ const AddShoppingItem: React.FC<AddShoppingItemProps> = (props) => {
         placeholder="List"
       />
       <button
-        className="border-0 rounded-full text-slate-50 text-base font-bold uppercase w-20 bg-indigo-400 shadow"
+        className="border-0 rounded-full text-slate-50 text-base font-bold uppercase w-20 bg-indigo-400 shadow cursor-pointer"
         type="submit"
       >
         add
