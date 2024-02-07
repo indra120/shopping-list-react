@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react"
-import Navbar from "@/components/navbar"
+import Header from "@/components/header"
 import ShoppingLists from "@/components/shopping-lists"
 import AddShoppingItem from "@/components/add-shopping-item"
 import Info from "@/components/info"
@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Header />
 
       <section className="flex flex-col h-[540px] max-w-[480px] p-4 my-6 mx-auto bg-gray-100 rounded-xl shadow-md">
         <AddShoppingItem setShoppingList={setShoppingList} />
